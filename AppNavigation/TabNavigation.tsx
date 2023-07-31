@@ -1,4 +1,4 @@
-import Home from '../Components/Home';
+import Tracking from '../Components/Tracking';
 import Map from '../Components/Map';
 import Camera from '../Components/CameraPage';
 import NfcReader from '../Components/NfcReader';
@@ -15,7 +15,7 @@ export default function TabNaviagtion(): JSX.Element {
     <Tabs.Navigator>
       <Tabs.Screen
         name="Home"
-        component={Home}
+        component={Tracking}
         options={{
           tabBarLabel: 'Home',
           tabBarIcon: ({color}) => (

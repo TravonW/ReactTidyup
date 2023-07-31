@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
 
-    // Tracking
+    // Home
     container: {
         position: "relative",
         height: 125,
@@ -134,6 +134,18 @@ export default StyleSheet.create({
          overflow: 'hidden'
 
 
+    },
+    donateModalContainer:{
+        justifyContent: "center",
+        height: "50%",
+        marginTop: 'auto',
+        backgroundColor:"grey",
+        borderRadius: 25,
+
+    },
+    donateModalText:{
+        color: "green",
+        alignSelf:"center"
     },
     // Donate Feature
     containerDonate: {

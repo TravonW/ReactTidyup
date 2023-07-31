@@ -12,7 +12,7 @@ import { useRef, useState, useEffect, useCallback, } from "react";
 export default function CameraPage(): JSX.Element {
     return(
         <View>
-            <Text>Hello from Camera Page</Text>
+            <Text>Hello from Camera Page  hello </Text>
         </View>
     )
 }

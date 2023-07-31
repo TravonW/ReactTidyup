@@ -1,5 +1,5 @@
 // @ts-nocheck
-import { Pressable, StyleSheet, Text, View, Image, FlatList, TouchableOpacity, ActivityIndicator, } from "react-native";
+import { Pressable, StyleSheet, Text, View, Image, FlatList, TouchableOpacity, ActivityIndicator, Modal } from "react-native";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import { SafeAreaView } from "react-native-safe-area-context";
 import Search from "../assets/images/search.png"
@@ -26,13 +26,16 @@ export default function Tracking() {
     
     const [isLoading, setisLoading] = useState(true);
 
-    const 
+    const [modalVisible, setModalVisible] = useState(false)
+
+    console.log('hello')
 
     
     renderLeastUsedFlatList = ({item, index,}) =>{
         console.log(index)
         return(
             // Where list is rendered
+            <View>
             <TouchableOpacity
             style={[styles.item,
             {
@@ -41,11 +44,12 @@ export default function Tracking() {
                 width:200,
                 backgroundColor: "white",
                 margin: 5,
-                
-            
-            
             }
             ]}
+
+            onPress={() => {
+                setModalVisible(true)
+            }}
             // parenthesis whjen calling function
             //curly brackets when calling object/ defining object
             >
@@ -55,9 +59,13 @@ export default function Tracking() {
                 resizeMode="contain"
                 
                 />
+
                 <Text style={styles.listCounter}> {item.counter} </Text>
+            
+
 
             </TouchableOpacity>
+            </View>
         )
     }
     renderShirtsFlatList = ({item, index,}) =>{
@@ -133,7 +141,7 @@ export default function Tracking() {
             </View>
 
             <View style={styles.leastUseList}>
-                <Text style={styles.leastused}> Least Used </Text>
+                <Text style={styles.leastused}> Least Used</Text>
                 {!isLoading ? <ActivityIndicator /> : (
                     <FlatList style={styles.leastUseBorder}
                     data={clothesOrganize}
@@ -147,7 +155,7 @@ export default function Tracking() {
                    
             </View>
             {/* move this correctly */}
-            <Text style={styles.shirts}> Shirts </Text>
+            <Text style={styles.shirts}> Shirts</Text>
             <View style={styles.shirtsList}>
                 
                 {!isLoading ? <ActivityIndicator /> : (
@@ -181,6 +189,28 @@ export default function Tracking() {
        
             </View>
             
+                    <View>
+                    <Modal
+        animationType="slide"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          Alert.alert('Modal has been closed.');
+          setModalVisible(!modalVisible);
+        }}>
+        <View style={styles.centeredView}>
+          <View style={styles.modalView}>
+            <Text style={styles.modalText}>Hello World!</Text>
+            <Pressable
+              style={[styles.button, styles.buttonClose]}
+              onPress={() => setModalVisible(!modalVisible)}>
+              <Text style={styles.textStyle}>Hide Modal</Text>
+            </Pressable>
+          </View>
+        </View>
+      </Modal>
+                    </View>
+
         </View>
     );
 }

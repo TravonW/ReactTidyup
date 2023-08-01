@@ -143,9 +143,44 @@ export default StyleSheet.create({
         borderRadius: 25,
 
     },
-    donateModalText:{
-        color: "green",
-        alignSelf:"center"
+    donateModalExit:{
+        position: "absolute",
+        bottom: 170,
+        left: 275,
+        height: 39,
+        width: 39,
+        backgroundColor:"#91C8FF",
+        borderRadius: 35,
+        
+        
+    },
+    modalClothesImage:{
+        width: 350,
+        height: 250,
+        borderRadius: 100,
+        position: "absolute",
+        bottom: -80,
+        left: 20,
+  
+        
+    },
+    modalCountText:{
+        position: "absolute",
+        bottom: -160,
+
+
+    },
+    modalCount:{
+        position: "absolute",
+        bottom: -160,
+        right: 30,
+
+    },
+    modalCategory:{
+        position: "absolute",
+        bottom: -120,
+
+
     },
     // Donate Feature
     containerDonate: {

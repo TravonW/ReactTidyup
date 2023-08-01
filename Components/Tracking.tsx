@@ -15,6 +15,7 @@ import {SafeAreaView} from 'react-native-safe-area-context';
 import Search from '../assets/images/search.png';
 import Profile from '../assets/images/profile.png';
 import Logo from '../assets/images/logo.png';
+import Exit from '../assets/images/Exit.png';
 import styles from '../assets/styles/styles';
 import useClothesFlatList from '../hooks/useClothes';
 import {useState, useEffect} from 'react';
@@ -36,7 +37,11 @@ export default function Tracking() {
 
   const [modalVisible, setModalVisible] = useState(false);
 
-  const [selectedItem, setSelectedItem] = useState()
+  const [selectedItem, setSelectedItem] = useState({
+    src:"", counter: 1, category: ""
+  })
+
+  
 
   console.log('hello');
 
@@ -58,7 +63,7 @@ export default function Tracking() {
           ]}
           onPress={() => {
             setModalVisible(true);
-            setSelectedItem(item.src)
+            setSelectedItem(item)
           }}
           // parenthesis whjen calling function
           //curly brackets when calling object/ defining object
@@ -86,11 +91,14 @@ export default function Tracking() {
                     setModalVisible(!modalVisible)
                 }}>
                     <Image
-            style={styles.imageLeastUse}
-            source={{uri: selectedItem}}
+            style={styles.modalClothesImage}
+            source={{uri: selectedItem.src}}
             resizeMode="contain"
           />
-                <Text style={styles.donateModalText} > Hello World </Text>
+                <Text style={styles.modalCountText}> Number of Wears:</Text>
+                <Text style={styles.modalCount}> {selectedItem.counter}</Text>
+                <Text style={styles.modalCategory}> {selectedItem.category}</Text>
+                <Image source={Exit} style={styles.donateModalExit} />
                 </Pressable>
             </View>
           </Modal>

@@ -166,7 +166,7 @@ export default StyleSheet.create({
         height: 150,    
         position: "absolute",
         borderRadius: 30,
-        top: 50,
+        top: 35,
     
         overflow: 'hidden',
         alignSelf: "center",
@@ -177,8 +177,8 @@ export default StyleSheet.create({
     modalCountText:{
         position: "absolute",
         
-        fontSize: 20,
-        bottom: 50,
+        fontSize: 30,
+        bottom: 95,
         
 
 
@@ -187,8 +187,8 @@ export default StyleSheet.create({
         position: "absolute",
     
         right: 30,
-        fontSize: 20,
-        bottom: 60,
+        fontSize: 30,
+        bottom: 95,
         
 
     },
@@ -196,7 +196,8 @@ export default StyleSheet.create({
         position: "absolute",
     
         color: "#91C8FF",
-        fontSize: 20,
+        fontSize: 30,
+        bottom: 135,
 
 
     },
@@ -205,10 +206,10 @@ export default StyleSheet.create({
         fontSize: 50,
         fontWeight: 50,
         alignSelf: "center",
-        bottom: 65,
+        bottom: 95,
  
     },
-    donateModalContents:{
+    modalContents:{
         justifyContent: "center",
         height: "50%",
         marginTop: 'auto',
@@ -217,6 +218,11 @@ export default StyleSheet.create({
      
 
     },
+    modalDonateButton:{
+        color: "red",
+        
+    },
+    
     //
 
     containerDonate: {

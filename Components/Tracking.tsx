@@ -99,11 +99,13 @@ export default function Tracking() {
                 <Image source={Exit} style={styles.donateModalExit} />
               
                 </Pressable>
-                <View style={styles.donateModalContents}>
+                <View style={styles.modalContents}>
                 <Text style={styles.modalCountText}> Number of Wears:</Text>
                 <Text style={styles.modalCount}> {selectedItem.counter}</Text>
                 <Text style={styles.modalCategory}> {selectedItem.category}</Text>
                 <Text style={styles.modalName}> {selectedItem.Name}</Text>
+              {/*  Need to make pressable right here for add to donation list */}
+      
                 </View>
             </View>
           </Modal>

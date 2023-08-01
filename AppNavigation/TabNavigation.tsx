@@ -1,5 +1,5 @@
 import Tracking from '../Components/Tracking';
-import Map from '../Components/Map';
+import Donate from '../Components/Donate';
 import NfcReader from '../Components/NfcReader';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -33,8 +33,8 @@ export default function TabNaviagtion(): JSX.Element {
         }}
       />
       <Tabs.Screen
-        name="Map"
-        component={Map}
+        name="Donate"
+        component={Donate}
         options={{
           tabBarLabel: 'Donate',
           tabBarIcon: ({color}) => (

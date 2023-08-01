@@ -139,34 +139,37 @@ export default StyleSheet.create({
         justifyContent: "center",
         height: "50%",
         marginTop: 'auto',
-        backgroundColor:"grey",
+        backgroundColor:"white",
         borderRadius: 25,
 
     },
     donateModalExit:{
         position: "absolute",
-        bottom: 170,
-        left: 275,
+        bottom: 195,
+        right: 1,
         height: 39,
         width: 39,
         backgroundColor:"#91C8FF",
         borderRadius: 35,
+        alignSelf: "flex-end"
         
         
     },
     modalClothesImage:{
-        width: 350,
-        height: 250,
-        borderRadius: 100,
+        width: 306,
+        height: 250,    
         position: "absolute",
-        bottom: -80,
-        left: 20,
+        bottom: -30,
+        overflow: 'hidden',
+        alignSelf: "center",
+        backgroundColor: 'red'
   
         
     },
     modalCountText:{
         position: "absolute",
         bottom: -160,
+        fontSize: 20,
 
 
     },
@@ -174,13 +177,22 @@ export default StyleSheet.create({
         position: "absolute",
         bottom: -160,
         right: 30,
+        fontSize: 20,
+        
 
     },
     modalCategory:{
         position: "absolute",
         bottom: -120,
+        color: "#91C8FF",
+        fontSize: 20,
 
 
+    },
+    modalName:{
+        bottom: -80,
+        fontSize: 40,
+        alignSelf: "center"
     },
     // Donate Feature
     containerDonate: {

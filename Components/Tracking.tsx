@@ -38,7 +38,7 @@ export default function Tracking() {
   const [modalVisible, setModalVisible] = useState(false);
 
   const [selectedItem, setSelectedItem] = useState({
-    src:"", counter: 1, category: ""
+    src:"", counter: 1, category: "", Name: ""
   })
 
   
@@ -98,6 +98,7 @@ export default function Tracking() {
                 <Text style={styles.modalCountText}> Number of Wears:</Text>
                 <Text style={styles.modalCount}> {selectedItem.counter}</Text>
                 <Text style={styles.modalCategory}> {selectedItem.category}</Text>
+                <Text style={styles.modalName}> {selectedItem.Name}</Text>
                 <Image source={Exit} style={styles.donateModalExit} />
                 </Pressable>
             </View>
@@ -111,7 +112,7 @@ export default function Tracking() {
     return (
       // Where list is rendered
       <View>
-        {item.category === 'shirts' ? (
+        {item.category === 'Shirts' ? (
           <TouchableOpacity
             style={[
               styles.item,
@@ -138,7 +139,7 @@ export default function Tracking() {
     return (
       // Where list is rendered
       <View>
-        {item.category === 'pants' ? (
+        {item.category === 'Pants' ? (
           <TouchableOpacity
             style={[
               styles.item,

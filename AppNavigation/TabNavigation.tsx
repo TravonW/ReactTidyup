@@ -40,6 +40,7 @@ export default function TabNaviagtion(): JSX.Element {
           tabBarIcon: ({color}) => (
             <FontAwesome5 name={'hand-holding-heart'} size={30} color={color} />
           ),
+          headerShown: false,
         }}
       />
     </Tabs.Navigator>

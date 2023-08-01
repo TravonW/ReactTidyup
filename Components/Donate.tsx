@@ -180,43 +180,19 @@ import {
               data={clothesOrganize}
               renderItem={renderLeastUsedFlatList}
               keyExtractor={item => `key-${item.id}`}
-              horizontal={true}
-              showsHorizontalScrollIndicator={false}
+              vertical={true}
+              showsVerticalScrollIndicator={true}
             />
           )}
+        
         </View>
-        {/* move this correctly */}
-        <Text style={styles.shirts}> Shirts</Text>
-        <View style={styles.shirtsList}>
-          {!isLoading ? (
-            <ActivityIndicator />
-          ) : (
-            <FlatList
-              data={clothesFlatList}
-              renderItem={renderShirtsFlatList}
-              keyExtractor={item => `key-${item.id}`}
-              horizontal={true}
-              showsHorizontalScrollIndicator={false}
-            />
-          )}
-        </View>
+        {/*  Button for donate and favorite */}
         <View>
-          <Text style={styles.pants}> Pants </Text>
-          <View style={styles.pantsList}>
-            {!isLoading ? (
-              <ActivityIndicator />
-            ) : (
-              <FlatList
-                data={clothesFlatList}
-                renderItem={renderPantsFlatList}
-                keyExtractor={item => `key-${item.id}`}
-                horizontal={true}
-                showsHorizontalScrollIndicator={false}
-              />
-            )}
-          </View>
+           
         </View>
-      </View>
+
+        </View>
+      
     );
   }
   

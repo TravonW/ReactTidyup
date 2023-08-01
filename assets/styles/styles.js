@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
 
-    // Home
+    // Tracking
     container: {
         position: "relative",
         height: 125,
@@ -194,7 +194,7 @@ export default StyleSheet.create({
         fontSize: 40,
         alignSelf: "center"
     },
-    // Donate Feature
+
     containerDonate: {
         flex: 1,
         backgroundColor: '#fff',
@@ -236,6 +236,9 @@ export default StyleSheet.create({
         width:35,
         height: 35,
 
+    },
+    donateName:{
+        fontSize: 40,
     },
 
 

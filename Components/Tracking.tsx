@@ -95,12 +95,16 @@ export default function Tracking() {
             source={{uri: selectedItem.src}}
             resizeMode="contain"
           />
+ 
+                <Image source={Exit} style={styles.donateModalExit} />
+              
+                </Pressable>
+                <View style={styles.donateModalContents}>
                 <Text style={styles.modalCountText}> Number of Wears:</Text>
                 <Text style={styles.modalCount}> {selectedItem.counter}</Text>
                 <Text style={styles.modalCategory}> {selectedItem.category}</Text>
                 <Text style={styles.modalName}> {selectedItem.Name}</Text>
-                <Image source={Exit} style={styles.donateModalExit} />
-                </Pressable>
+                </View>
             </View>
           </Modal>
         </View>

@@ -1,9 +1,12 @@
 import React from 'react';
-import { TouchableOpacity, Text } from 'react-native';
+import { TouchableOpacity, Text, Button } from 'react-native';
 
 export const AddList = () => { return (
     <TouchableOpacity>
-      <Text> Hello </Text>
+      <Text> Hello2 </Text>
+      <Button 
+      title='Test'
+      />
     </TouchableOpacity>
   );
 };

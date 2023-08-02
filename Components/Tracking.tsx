@@ -10,6 +10,7 @@ import {
   ActivityIndicator,
   Modal,
   LogBox,
+  Button,
 } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import {SafeAreaView} from 'react-native-safe-area-context';
@@ -21,7 +22,6 @@ import styles from '../assets/styles/styles';
 import useClothesFlatList from '../hooks/useClothes';
 import {useState, useEffect} from 'react';
 import {AddList} from './TrackingButton';
-
 // ignores all warnings
 LogBox.ignoreLogs(['Warning']);
 
@@ -231,6 +231,10 @@ export default function Tracking() {
                 setModalVisible(!modalVisible);
               }}>
               <View style={styles.donateModalContainer}>
+                {/* DO NOT DELETE THIS FLAT LIST */}
+              <FlatList
+
+            />
                 <Pressable
                   onPress={() => {
                     setModalVisible(!modalVisible);

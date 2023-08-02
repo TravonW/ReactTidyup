@@ -222,6 +222,14 @@ export default StyleSheet.create({
         color: "red",
         
     },
+    modalButton:{
+        position: "absolute",
+        
+        fontSize: 30,
+        bottom:30,
+        
+
+    },
     
     //
 

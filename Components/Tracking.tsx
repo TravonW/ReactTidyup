@@ -20,6 +20,7 @@ import Exit from '../assets/images/Exit.png';
 import styles from '../assets/styles/styles';
 import useClothesFlatList from '../hooks/useClothes';
 import {useState, useEffect} from 'react';
+import {AddList} from './TrackingButton';
 
 // ignores all warnings
 LogBox.ignoreLogs(['Warning']);
@@ -96,6 +97,7 @@ export default function Tracking() {
                   setModalVisible(!modalVisible);
                 }}>
                 <Image source={Exit} style={styles.donateModalExit} />
+               
               </Pressable>
               <Image
                 style={styles.modalClothesImage}
@@ -109,6 +111,9 @@ export default function Tracking() {
                   {selectedItem.category}
                 </Text>
                 <Text style={styles.modalName}> {selectedItem.Name}</Text>
+
+                <AddList  style={styles.modalButton}/>
+                
                 
                 {/*  Need to make pressable right here for add to donation list */}
               </View>

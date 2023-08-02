@@ -112,7 +112,7 @@ export default function Tracking() {
                 </Text>
                 <Text style={styles.modalName}> {selectedItem.Name}</Text>
 
-                <AddList style={styles.modalDonateButton} />
+                <AddList  />
                 
                 
                 {/*  Need to make pressable right here for add to donation list */}

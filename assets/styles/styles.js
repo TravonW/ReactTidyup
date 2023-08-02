@@ -217,8 +217,9 @@ export default StyleSheet.create({
     },
     modalDonateButton:{
         color: "red",
-        backgroundColor:'blue',
-        width:20,
+        txtFontSize: 20,
+        backgroundColor:'red',
+        width:400,
         height:30,
         
     },
@@ -322,5 +323,69 @@ export default StyleSheet.create({
         width: 28,
         alignSelf: 'center',
         marginTop: 5
-    }
+    },
+    scanBackground:{
+        backgroundColor: "grey",
+        maxHeight: "100%",
+        maxWidth: "100%",
+        height: "100%",
+        width: "100%",
+
+    },
+    scanAndWriteContainer:{
+        backgroundColor: "white",
+        height: "50%",
+        width: "100%",
+        position: "absolute",
+        bottom: -10,
+        borderRadius: "25%"
+
+
+    },
+    ScanTagText:{
+        color:"green",
+        textAlign: "center",
+        fontSize: 40,
+
+    },
+    scanNfcButtonText:{
+        color: "green",
+        fontSize: 30,
+        
+    },
+    scanNfcButton:{
+
+        width: "88%",
+        alignSelf: "center",
+        borderStyle: "solid",
+        borderRadius: "20%",
+        borderColor: "black",
+        borderWidth: 1,
+        
+        
+
+    },
+    AddTagText:{
+        color:"blue",
+        textAlign: "center",
+        fontSize:40, 
+
+    },
+    writeToNfcButtonText:{
+        color: "blue",
+        fontSize: 40,
+
+    },
+    writeToNfcButton:{
+        width: "88%",
+        alignSelf: "center",
+        
+        borderStyle: "solid",
+        borderRadius: "20%",
+        borderColor: "black",
+        borderWidth: 1,
+        
+
+
+    },
 })

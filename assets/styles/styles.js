@@ -61,9 +61,6 @@ export default StyleSheet.create({
         width: 260,
         bottom: 7,
     },
-    logoContainer:{
-        flex: 1,
-    },
     wrapButton:{
         position: "absolute",
         top: 250,
@@ -139,9 +136,8 @@ export default StyleSheet.create({
         justifyContent: "center",
         height: "50%",
         marginTop: 'auto',
-        backgroundColor:"white",
+        backgroundColor: "white", 
         borderRadius: 25,
-        backgroundColor: "white",
         shadowColor: 'black',
         shadowOffset: { width: -2, height: 4 },
         shadowOpacity: 2,
@@ -170,7 +166,8 @@ export default StyleSheet.create({
     
         overflow: 'hidden',
         alignSelf: "center",
-        backgroundColor: "#91C8FF"
+        backgroundColor: "#91C8FF",
+        marginBottom: 40,
   
         
     },
@@ -179,7 +176,7 @@ export default StyleSheet.create({
         
         fontSize: 30,
         bottom: 95,
-        
+    
 
 
     },
@@ -204,7 +201,7 @@ export default StyleSheet.create({
     modalName:{
      
         fontSize: 50,
-        fontWeight: 50,
+        fontWeight: 'bold', // Use a numeric value or remove this line
         alignSelf: "center",
         bottom: 95,
  
@@ -220,15 +217,15 @@ export default StyleSheet.create({
     },
     modalDonateButton:{
         color: "red",
+        backgroundColor:'blue',
+        width:20,
+        height:30,
         
     },
     modalButton:{
-        position: "absolute",
 
-        top: 100,
-        height: 100,
         backgroundColor: "red",
-        bottom:30,
+
         
 
     },

@@ -112,7 +112,7 @@ export default function Tracking() {
                 </Text>
                 <Text style={styles.modalName}> {selectedItem.Name}</Text>
 
-                <AddList  style={styles.modalButton}/>
+                <AddList style={styles.modalDonateButton} />
                 
                 
                 {/*  Need to make pressable right here for add to donation list */}
@@ -231,7 +231,6 @@ export default function Tracking() {
                 setModalVisible(!modalVisible);
               }}>
               <View style={styles.donateModalContainer}>
-                {/* DO NOT DELETE THIS FLAT LIST */}
               <FlatList
 
             />

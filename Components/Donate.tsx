@@ -95,7 +95,7 @@ import {
               source={{uri: selectedItem.src}}
               resizeMode="contain"
             />
-                  <Text style={styles.modalCountText}> Number of Wears:</Text>
+                  <Text style={styles.modalCountText}> Number :</Text>
                   <Text style={styles.modalCount}> {selectedItem.counter}</Text>
                   <Text style={styles.modalCategory}> {selectedItem.category}</Text>
                   <Text style={styles.modalName}> {selectedItem.Name}</Text>
@@ -176,7 +176,8 @@ import {
             <ActivityIndicator />
           ) : (
             <FlatList
-              style={styles.leastUseBorder}
+            // Add height to big scroll tag to make it long
+              style={styles.leastUseDonateList}
               data={clothesOrganize}
               renderItem={renderLeastUsedFlatList}
               keyExtractor={item => `key-${item.id}`}

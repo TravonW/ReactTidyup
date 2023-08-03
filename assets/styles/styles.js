@@ -406,4 +406,13 @@ export default StyleSheet.create({
     writeNfcButtonName:{
         color:"#91C8FF",
     },
+
+
+
+
+    ///DOnate Styles
+    leastUseDonateList:{
+        height: "100%",
+
+    },
 })

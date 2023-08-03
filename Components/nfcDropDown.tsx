@@ -13,20 +13,23 @@ import {
   Modal,
   LogBox,
   Button,
+
 } from 'react-native';
+import { TextInput } from 'react-native-gesture-handler';
+
 
 
 function NfcDropDown() {
   const [open, setOpen] = useState(false);
   const [value, setValue] = useState(null);
   const [items, setItems] = useState([
-    {label: 'Shirts', value: 'BLACK'},
-    {label: 'Pants', value: 'banana'},
+    {label: 'Tops', value: 'Shirt'},
+    {label: 'Bottoms', value: 'Pants'},
     {labelcool: "cool", value: "cool"}
   ]);
 
 
-
+console.log(value)
 
 
   return (
@@ -38,7 +41,21 @@ function NfcDropDown() {
       setOpen={setOpen}
       setValue={setValue}
       setItems={setItems}
-      onOpen={writeNFCS}
+      // onOpen={writeNFCS}
+      // use this to put selected item in variable for pants or shirt
+      onSelectItem= {(labelcool) => {
+         if(labelcool.value === "cool"){writeNFCS()}
+      }}
+      style={{
+        borderRadius: 10
+      }}
+      textStyle={{
+        color: "#91C8FF"
+      }}
+
+
+      
+      
      
 
     />
@@ -47,3 +64,6 @@ function NfcDropDown() {
   );
 }
 export default NfcDropDown;
+
+
+

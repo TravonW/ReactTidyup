@@ -343,13 +343,13 @@ export default StyleSheet.create({
 
     },
     ScanTagText:{
-        color:"green",
+        color:"#91C8FF",
         textAlign: "center",
         fontSize: 40,
 
     },
     scanNfcButtonText:{
-        color: "green",
+        color: "#91C8FF",
         fontSize: 30,
         
     },
@@ -358,34 +358,52 @@ export default StyleSheet.create({
         width: "88%",
         alignSelf: "center",
         borderStyle: "solid",
-        borderRadius: "20%",
-        borderColor: "black",
+        borderRadius: "15%",
+        borderColor:"#black" ,
         borderWidth: 1,
+        height: 40,
         
         
 
     },
     AddTagText:{
-        color:"blue",
+        color:"#91C8FF",
         textAlign: "center",
         fontSize:40, 
 
     },
     writeToNfcButtonText:{
-        color: "blue",
+        color: "#91C8FF",
         fontSize: 40,
 
     },
-    writeToNfcButton:{
+    writeToNfcDoneButton:{
         width: "88%",
         alignSelf: "center",
         
         borderStyle: "solid",
-        borderRadius: "20%",
+        borderRadius: "15%",
         borderColor: "black",
         borderWidth: 1,
+
+        position: "absolute",
+        bottom: -90,
+        color:"#91C8FF",
         
 
 
+    },
+    writeNfcButtonInput:{
+        color:"black",
+        borderStyle: "solid",
+        borderRadius: "15%",
+        borderWidth: 1,
+
+        height: 50,
+
+    
+    },
+    writeNfcButtonName:{
+        color:"#91C8FF",
     },
 })

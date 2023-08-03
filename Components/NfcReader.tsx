@@ -1,10 +1,20 @@
-import {useState, useEffect} from 'react';
-import {View, Text, SafeAreaView, TouchableOpacity} from 'react-native';
-import NfcManager, {Ndef, NfcEvents, NfcTech} from 'react-native-nfc-manager';
+import { useState, useEffect } from 'react';
+import {
+  View,
+  Text,
+  SafeAreaView,
+  TouchableOpacity,
+  TextInput,
+} from 'react-native';
+import NfcManager, { Ndef, NfcEvents, NfcTech } from 'react-native-nfc-manager';
 import styles from '../assets/styles/styles';
 import NfcDropDown from './nfcDropDown';
 export default function NfcReader(): JSX.Element {
   const [nfc, setNfc] = useState<Boolean>(false);
+
+
+
+
 
   // checks if the device supports NFC
   useEffect(() => {
@@ -38,7 +48,7 @@ export default function NfcReader(): JSX.Element {
   }
 
   /// Write to the NFC-using async when sending or recieving data
-    const writeNFC = async () => {
+  const writeNFC = async () => {
     let result = false;
 
     try {
@@ -72,24 +82,41 @@ export default function NfcReader(): JSX.Element {
 
   return (
     <SafeAreaView>
+      {/* Page Container */}
       <View style={styles.scanBackground}>
         <Text>Scan the NFC Sticker Please</Text>
         {/* put image above scan code  */}
+        {/* Scan And Write container */}
         <View style={styles.scanAndWriteContainer}>
+          {/* Scan Tag Container */}
           <View>
             <Text style={styles.ScanTagText}> Scan Tag</Text>
             <TouchableOpacity onPress={readNdef} style={styles.scanNfcButton}>
               <Text style={styles.scanNfcButtonText}>Scan </Text>
             </TouchableOpacity>
           </View>
+          {/* Add Tag Container */}
           <View>
             <Text style={styles.AddTagText}> Add Tag</Text>
             <NfcDropDown />
-            <TouchableOpacity
-              onPress={writeNFC}
-              style={styles.writeToNfcButton}>
-              <Text style={styles.writeToNfcButtonText}>Write To Tag</Text>
-            </TouchableOpacity>
+            <View>
+              
+            </View>
+            {/* Name Input */}
+            <View>
+              <TextInput style={styles.writeNfcButtonInput}> 
+              <Text style={styles.writeNfcButtonName}> Name </Text>
+              </TextInput>
+            </View>
+            {/* Done Button Container */}
+            <View>
+              <TouchableOpacity
+                onPress={writeNFC}
+                style={styles.writeToNfcDoneButton}>
+                <Text style={styles.writeToNfcButtonText}>Done Button</Text>
+              </TouchableOpacity>
+            </View>
+
           </View>
         </View>
       </View>

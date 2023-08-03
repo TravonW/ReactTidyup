@@ -412,7 +412,9 @@ export default StyleSheet.create({
 
     ///DOnate Styles
     leastUseDonateList:{
-        height: "100%",
+        height: 600,
+        position: "absolute",
+        top: 50,
 
     },
 })

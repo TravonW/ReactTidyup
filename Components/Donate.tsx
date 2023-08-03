@@ -170,8 +170,8 @@ import {
           <Image source={Profile} style={styles.profile} />
         </View>
   
-        <View style={styles.leastUseList}>
-          <Text style={styles.leastused}> Least Used</Text>
+        <View >
+          <Text > Least Used</Text>
           {!isLoading ? (
             <ActivityIndicator />
           ) : (

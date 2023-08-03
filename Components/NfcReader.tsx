@@ -2,7 +2,7 @@ import {useState, useEffect} from 'react';
 import {View, Text, SafeAreaView, TouchableOpacity} from 'react-native';
 import NfcManager, {Ndef, NfcEvents, NfcTech} from 'react-native-nfc-manager';
 import styles from '../assets/styles/styles';
-
+import NfcDropDown from './nfcDropDown';
 export default function NfcReader(): JSX.Element {
   const [nfc, setNfc] = useState<Boolean>(false);
 
@@ -38,14 +38,14 @@ export default function NfcReader(): JSX.Element {
   }
 
   /// Write to the NFC-using async when sending or recieving data
-  const writeNFC = async () => {
+    const writeNFC = async () => {
     let result = false;
 
     try {
       await NfcManager.requestTechnology(NfcTech.Ndef);
 
       const byteData = Ndef.encodeMessage([
-        Ndef.uriRecord('https://www.youtube.com/watch?v=Qkc6uCajkHs'),
+        Ndef.uriRecord('https://www.instagram.com/partyingwiththetates/?hl=en'),
       ]);
       if (byteData) {
         await NfcManager.ndefHandler.writeNdefMessage(byteData);
@@ -56,7 +56,6 @@ export default function NfcReader(): JSX.Element {
       console.warn(e);
     } finally {
       NfcManager.cancelTechnologyRequest();
-      
     }
     return result;
   };
@@ -76,19 +75,22 @@ export default function NfcReader(): JSX.Element {
       <View style={styles.scanBackground}>
         <Text>Scan the NFC Sticker Please</Text>
         {/* put image above scan code  */}
-        <View style={styles.scanAndWriteContainer} >
-        <View >
-          <Text style={styles.ScanTagText}> Scan Tag</Text>
-          <TouchableOpacity onPress={readNdef} style={styles.scanNfcButton}>
-            <Text style={styles.scanNfcButtonText}>Scan </Text>
-          </TouchableOpacity>
-        </View>
-        <View >
-          <Text style={styles.AddTagText}> Add Tag</Text>
-          <TouchableOpacity onPress={writeNFC} style={styles.writeToNfcButton}>
-            <Text style={styles.writeToNfcButtonText}>Write To Tag</Text>
-          </TouchableOpacity>
-        </View>
+        <View style={styles.scanAndWriteContainer}>
+          <View>
+            <Text style={styles.ScanTagText}> Scan Tag</Text>
+            <TouchableOpacity onPress={readNdef} style={styles.scanNfcButton}>
+              <Text style={styles.scanNfcButtonText}>Scan </Text>
+            </TouchableOpacity>
+          </View>
+          <View>
+            <Text style={styles.AddTagText}> Add Tag</Text>
+            <NfcDropDown />
+            <TouchableOpacity
+              onPress={writeNFC}
+              style={styles.writeToNfcButton}>
+              <Text style={styles.writeToNfcButtonText}>Write To Tag</Text>
+            </TouchableOpacity>
+          </View>
         </View>
       </View>
     </SafeAreaView>

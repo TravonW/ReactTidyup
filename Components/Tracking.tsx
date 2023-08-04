@@ -177,6 +177,7 @@ export default function Tracking() {
                 <View style={styles.modalContents}>
                   <Text style={styles.modalCountText}> Number of Wears:</Text>
                   <Text style={styles.modalCount}> {selectedItem.counter}</Text>
+                  
                   <Text style={styles.modalCategory}>
                     {' '}
                     {selectedItem.category}

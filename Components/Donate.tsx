@@ -164,11 +164,11 @@ import {
     };
   
     return (
-      <View style={styles.container}>
-        <View style={styles.logoContainer}>
-          <Image source={Logo} style={styles.logo} />
+      <View style={styles.donateContainer}>
+        <View style={styles.donateLogoContainer}>
+          <Image source={Logo} style={styles.donateLogo} />
           {/* <Image source={Search} style={styles.search} /> */}
-          <Image source={Profile} style={styles.profile} />
+          <Image source={Profile} style={styles.donateProfile} />
         </View>
   
         <View >

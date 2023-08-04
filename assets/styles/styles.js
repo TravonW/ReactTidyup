@@ -153,7 +153,7 @@ export default StyleSheet.create({
         width: 39,
         backgroundColor:"#91C8FF",
         borderRadius: 35,
-        alignSelf: "flex-end"
+        alignSelf: "center"
         
         
         
@@ -440,6 +440,40 @@ export default StyleSheet.create({
 
 
     ///DOnate Styles
+    donateContainer: {
+        position: "relative",
+        height: 125,
+        backgroundColor: 'white',
+        shadowColor: 'black',
+        shadowOffset: { width: -2, height: 4 },
+        shadowOpacity: 0.5,
+        shadowRadius: 3,
+    },
+
+
+    donateLogoContainer: {
+        left: 20,
+        marginTop: 75,
+        flex: 1,
+        flexDirection: 'row'
+    },
+    donateLogo: {
+        position: "absolute",
+        left: 10,
+        height: 52,
+        width: 260,
+        bottom: -20,
+    },
+    donateProfile: {
+        position: "absolute",
+        right: 30,
+        bottom: -20,
+        width: 32,
+        height: 32,
+    },
+    
+
+
     leastUseDonateListContainer:{
  
     },
@@ -547,4 +581,5 @@ export default StyleSheet.create({
         top: 10,
  
     },
+ 
 })

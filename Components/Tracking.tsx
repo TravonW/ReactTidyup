@@ -96,7 +96,7 @@ export default function Tracking() {
                 onPress={() => {
                   setModalVisible(!modalVisible);
                 }}>
-                <Image source={Exit} style={styles.donateModalExit} />
+                <Image source={Exit} style={styles.trackingModalExit} />
                
               </Pressable>
               <Image
@@ -167,7 +167,7 @@ export default function Tracking() {
                   onPress={() => {
                     setModalVisible(!modalVisible);
                   }}>
-                  <Image source={Exit} style={styles.donateModalExit} />
+                  <Image source={Exit} style={styles.trackingModalExit} />
                 </Pressable>
                 <Image
                   style={styles.modalClothesImage}

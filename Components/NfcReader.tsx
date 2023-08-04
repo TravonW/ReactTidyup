@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState, useEffect } from 'react';
 import {
   View,
@@ -55,7 +56,7 @@ export default function NfcReader(): JSX.Element {
       await NfcManager.requestTechnology(NfcTech.Ndef);
 
       const byteData = Ndef.encodeMessage([
-        Ndef.uriRecord('https://www.instagram.com/patoe1991/?hl=en'),
+        Ndef.uriRecord('https://www.instagram.com/partyingwiththetates/?hl=en'),
       ]);
       if (byteData) {
         await NfcManager.ndefHandler.writeNdefMessage(byteData);

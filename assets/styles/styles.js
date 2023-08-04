@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 
+
 export default StyleSheet.create({
 
     // Tracking
@@ -352,7 +353,11 @@ export default StyleSheet.create({
     },
     scanNfcButtonText:{
         color: "#91C8FF",
-        fontSize: 30,
+        fontSize: 40,
+        alignSelf: "center",
+        top: 5,
+        fontFamily: "Georgia"
+
         
     },
     scanNfcButton:{
@@ -363,7 +368,8 @@ export default StyleSheet.create({
         borderRadius: "15%",
         borderColor:"#black" ,
         borderWidth: 1,
-        height: 40,
+        height: 65,
+        top: 1,
         
         
         
@@ -371,12 +377,13 @@ export default StyleSheet.create({
     },
     addTagText:{
         color:"#91C8FF",
-        fontSize:40, 
+        fontSize:20, 
         width: 300,
         alignSelf:"center",
         right: 50,
         position:"relative",
-        top:20,
+        top:15,
+        fontFamily:"Georgia"
 
         
 
@@ -384,6 +391,8 @@ export default StyleSheet.create({
     writeToNfcButtonText:{
         color: "#91C8FF",
         fontSize: 40,
+        alignSelf: "center",
+        fontFamily:"Georgia"
 
     },
     writeToNfcDoneButton:{
@@ -398,7 +407,7 @@ export default StyleSheet.create({
         position: "absolute",
         bottom: -170,
         color:"#91C8FF",
-        backgroundColor: "red",
+
         
 
 
@@ -416,12 +425,15 @@ export default StyleSheet.create({
         alignSelf: "center",
         width: "88%",
         height: 65,
+        fontFamily: "Georgia"
 
     
     },
     writeNfcButtonName:{
         color:"#91C8FF",
-        fontSize: 40,
+        fontSize: 30,
+        textAlign: "center",
+       
     },
 
 
@@ -456,5 +468,20 @@ export default StyleSheet.create({
     },
     donateClothesView:{
         flexWrap: 'wrap'
+    },
+    textAboveDonationListL:{
+        backgroundColor:"#91C8FF",
+        alignSelf: "center",
+        textAlign: "center",
+        fontFamily: "Georgia",
+        fontSize: 20,
+        top: 35,
+
+        width: "90%",
+
+        borderStyle: "solid",
+        borderWidth: 1,
+        borderRadius: "15%",
+        overflow: 1,
     }
 })

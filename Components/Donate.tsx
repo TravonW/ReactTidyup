@@ -172,7 +172,7 @@ import {
         </View>
   
         <View >
-          <Text > </Text>
+          <Text style={styles.textAboveDonationListL}> Donation List </Text>
          
           {!isLoading ? (
             <ActivityIndicator />

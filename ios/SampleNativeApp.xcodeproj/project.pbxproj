@@ -615,6 +615,7 @@
 				DEVELOPMENT_TEAM = J67B5M4HQ4;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SampleNativeApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TidyYup;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -643,6 +644,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = J67B5M4HQ4;
 				INFOPLIST_FILE = SampleNativeApp/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = TidyYup;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

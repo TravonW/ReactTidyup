@@ -2,7 +2,7 @@ import { StyleSheet } from "react-native";
 
 export default StyleSheet.create({
 
-    // Home
+    // Tracking
     container: {
         position: "relative",
         height: 125,
@@ -60,9 +60,6 @@ export default StyleSheet.create({
         height: 52,
         width: 260,
         bottom: 7,
-    },
-    logoContainer:{
-        flex: 1,
     },
     wrapButton:{
         position: "absolute",
@@ -139,15 +136,103 @@ export default StyleSheet.create({
         justifyContent: "center",
         height: "50%",
         marginTop: 'auto',
-        backgroundColor:"grey",
+        backgroundColor: "white", 
         borderRadius: 25,
+        shadowColor: 'black',
+        shadowOffset: { width: -2, height: 4 },
+        shadowOpacity: 2,
+        shadowRadius: 3,
 
     },
-    donateModalText:{
-        color: "green",
-        alignSelf:"center"
+    donateModalExit:{
+        position: "absolute",
+     
+        right: 1,
+        height: 39,
+        width: 39,
+        backgroundColor:"#91C8FF",
+        borderRadius: 35,
+        alignSelf: "flex-end"
+        
+        
+        
     },
-    // Donate Feature
+    modalClothesImage:{
+        width: 300,
+        height: 150,    
+        position: "absolute",
+        borderRadius: 30,
+        top: 35,
+    
+        overflow: 'hidden',
+        alignSelf: "center",
+        backgroundColor: "#91C8FF",
+        marginBottom: 40,
+  
+        
+    },
+    modalCountText:{
+        position: "absolute",
+        
+        fontSize: 30,
+        bottom: 95,
+    
+
+
+    },
+    modalCount:{
+        position: "absolute",
+    
+        right: 30,
+        fontSize: 30,
+        bottom: 95,
+        
+
+    },
+    modalCategory:{
+        position: "absolute",
+    
+        color: "#91C8FF",
+        fontSize: 30,
+        bottom: 135,
+
+
+    },
+    modalName:{
+     
+        fontSize: 50,
+        fontWeight: 'bold', // Use a numeric value or remove this line
+        alignSelf: "center",
+        bottom: 95,
+ 
+    },
+    modalContents:{
+        justifyContent: "center",
+        height: "50%",
+        marginTop: 'auto',
+        backgroundColor:"white",
+        borderRadius: 25,
+     
+
+    },
+    modalDonateButton:{
+        color: "red",
+        txtFontSize: 20,
+        backgroundColor:'red',
+        width:400,
+        height:30,
+        
+    },
+    modalButton:{
+
+        backgroundColor: "red",
+
+        
+
+    },
+    
+    //
+
     containerDonate: {
         flex: 1,
         backgroundColor: '#fff',
@@ -189,6 +274,9 @@ export default StyleSheet.create({
         width:35,
         height: 35,
 
+    },
+    donateName:{
+        fontSize: 40,
     },
 
 
@@ -235,5 +323,98 @@ export default StyleSheet.create({
         width: 28,
         alignSelf: 'center',
         marginTop: 5
-    }
+    },
+    scanBackground:{
+        backgroundColor: "grey",
+        maxHeight: "100%",
+        maxWidth: "100%",
+        height: "100%",
+        width: "100%",
+
+    },
+    scanAndWriteContainer:{
+        backgroundColor: "white",
+        height: "50%",
+        width: "100%",
+        position: "absolute",
+        bottom: -10,
+        borderRadius: "25%"
+
+
+    },
+    ScanTagText:{
+        color:"#91C8FF",
+        textAlign: "center",
+        fontSize: 40,
+
+    },
+    scanNfcButtonText:{
+        color: "#91C8FF",
+        fontSize: 30,
+        
+    },
+    scanNfcButton:{
+
+        width: "88%",
+        alignSelf: "center",
+        borderStyle: "solid",
+        borderRadius: "15%",
+        borderColor:"#black" ,
+        borderWidth: 1,
+        height: 40,
+        
+        
+
+    },
+    AddTagText:{
+        color:"#91C8FF",
+        textAlign: "center",
+        fontSize:40, 
+
+    },
+    writeToNfcButtonText:{
+        color: "#91C8FF",
+        fontSize: 40,
+
+    },
+    writeToNfcDoneButton:{
+        width: "88%",
+        alignSelf: "center",
+        
+        borderStyle: "solid",
+        borderRadius: "15%",
+        borderColor: "black",
+        borderWidth: 1,
+
+        position: "absolute",
+        bottom: -90,
+        color:"#91C8FF",
+        
+
+
+    },
+    writeNfcButtonInput:{
+        color:"black",
+        borderStyle: "solid",
+        borderRadius: "15%",
+        borderWidth: 1,
+
+        height: 50,
+
+    
+    },
+    writeNfcButtonName:{
+        color:"#91C8FF",
+    },
+
+
+
+
+    ///DOnate Styles
+    leastUseDonateList:{
+        height: 600,
+        position: "absolute",
+        top: 50,
+
+    },
 })

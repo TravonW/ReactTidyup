@@ -1,5 +1,5 @@
 import Tracking from '../Components/Tracking';
-import Map from '../Components/Map';
+import Donate from '../Components/Donate';
 import NfcReader from '../Components/NfcReader';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
@@ -26,6 +26,7 @@ export default function TabNaviagtion(): JSX.Element {
         name="NFC"
         component={NfcReader}
         options={{
+          // Make a onpress to make it call the function like line 76 in NfcReader component
           tabBarLabel: 'NFC',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="nfc" size={30} color={color} />
@@ -33,13 +34,14 @@ export default function TabNaviagtion(): JSX.Element {
         }}
       />
       <Tabs.Screen
-        name="Map"
-        component={Map}
+        name="Donate"
+        component={Donate}
         options={{
           tabBarLabel: 'Donate',
           tabBarIcon: ({color}) => (
             <FontAwesome5 name={'hand-holding-heart'} size={30} color={color} />
           ),
+          headerShown: false,
         }}
       />
     </Tabs.Navigator>

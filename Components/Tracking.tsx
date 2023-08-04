@@ -9,15 +9,21 @@ import {
   TouchableOpacity,
   ActivityIndicator,
   Modal,
+  LogBox,
+  Button,
 } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import {SafeAreaView} from 'react-native-safe-area-context';
 import Search from '../assets/images/search.png';
 import Profile from '../assets/images/profile.png';
 import Logo from '../assets/images/logo.png';
+import Exit from '../assets/images/Exit.png';
 import styles from '../assets/styles/styles';
 import useClothesFlatList from '../hooks/useClothes';
 import {useState, useEffect} from 'react';
+import {AddList} from './TrackingButton';
+// ignores all warnings
+LogBox.ignoreLogs(['Warning']);
 
 /// functions //
 const filterOptions = () => {
@@ -36,12 +42,16 @@ export default function Tracking() {
 
   const [modalVisible, setModalVisible] = useState(false);
 
-  const [selectedItem, setSelectedItem] = useState()
+  const [selectedItem, setSelectedItem] = useState({
+    src: '',
+    counter: 1,
+    category: '',
+    Name: '',
+  });
 
   console.log('hello');
 
   renderLeastUsedFlatList = ({item, index}) => {
-    
     return (
       // Where list is rendered
       <View>
@@ -58,7 +68,7 @@ export default function Tracking() {
           ]}
           onPress={() => {
             setModalVisible(true);
-            setSelectedItem(item.src)
+            setSelectedItem(item);
           }}
           // parenthesis whjen calling function
           //curly brackets when calling object/ defining object
@@ -82,16 +92,31 @@ export default function Tracking() {
               setModalVisible(!modalVisible);
             }}>
             <View style={styles.donateModalContainer}>
-                <Pressable onPress={() => {
-                    setModalVisible(!modalVisible)
+              <Pressable
+                onPress={() => {
+                  setModalVisible(!modalVisible);
                 }}>
-                    <Image
-            style={styles.imageLeastUse}
-            source={{uri: selectedItem}}
-            resizeMode="contain"
-          />
-                <Text style={styles.donateModalText} > Hello World </Text>
-                </Pressable>
+                <Image source={Exit} style={styles.donateModalExit} />
+               
+              </Pressable>
+              <Image
+                style={styles.modalClothesImage}
+                source={{uri: selectedItem.src}}
+                resizeMode="contain"
+              />
+              <View style={styles.modalContents}>
+                <Text style={styles.modalCountText}> Number of Wears:</Text>
+                <Text style={styles.modalCount}> {selectedItem.counter}</Text>
+                <Text style={styles.modalCategory}>
+                  {selectedItem.category}
+                </Text>
+                <Text style={styles.modalName}> {selectedItem.Name}</Text>
+
+                <AddList  />
+                
+                
+                {/*  Need to make pressable right here for add to donation list */}
+              </View>
             </View>
           </Modal>
         </View>
@@ -103,7 +128,7 @@ export default function Tracking() {
     return (
       // Where list is rendered
       <View>
-        {item.category === 'shirts' ? (
+        {item.category === 'Shirts' ? (
           <TouchableOpacity
             style={[
               styles.item,
@@ -113,7 +138,11 @@ export default function Tracking() {
                 backgroundColor: 'white',
                 margin: 5,
               },
-            ]}>
+            ]}
+            onPress={() => {
+              setModalVisible(true);
+              setSelectedItem(item);
+            }}>
             <Image
               style={styles.image}
               source={{uri: item.src}}
@@ -122,6 +151,43 @@ export default function Tracking() {
             <Text style={styles.listCounter}> {item.counter} </Text>
           </TouchableOpacity>
         ) : null}
+
+        <View>
+          <View>
+            <Modal
+              animationType="slide"
+              visible={modalVisible}
+              transparent={true}
+              onRequestClose={() => {
+                Alert.alert('Modal has been closed.');
+                setModalVisible(!modalVisible);
+              }}>
+              <View style={styles.donateModalContainer}>
+                <Pressable
+                  onPress={() => {
+                    setModalVisible(!modalVisible);
+                  }}>
+                  <Image source={Exit} style={styles.donateModalExit} />
+                </Pressable>
+                <Image
+                  style={styles.modalClothesImage}
+                  source={{uri: selectedItem.src}}
+                  resizeMode="contain"
+                />
+                <View style={styles.modalContents}>
+                  <Text style={styles.modalCountText}> Number of Wears:</Text>
+                  <Text style={styles.modalCount}> {selectedItem.counter}</Text>
+                  <Text style={styles.modalCategory}>
+                    {' '}
+                    {selectedItem.category}
+                  </Text>
+                  <Text style={styles.modalName}> {selectedItem.Name}</Text>
+                  {/*  Need to make pressable right here for add to donation list */}
+                </View>
+              </View>
+            </Modal>
+          </View>
+        </View>
       </View>
     );
   };
@@ -130,7 +196,7 @@ export default function Tracking() {
     return (
       // Where list is rendered
       <View>
-        {item.category === 'pants' ? (
+        {item.category === 'Pants' ? (
           <TouchableOpacity
             style={[
               styles.item,
@@ -140,7 +206,11 @@ export default function Tracking() {
                 backgroundColor: 'white',
                 margin: 5,
               },
-            ]}>
+            ]}
+            onPress={() => {
+              setModalVisible(true);
+              setSelectedItem(item);
+            }}>
             <Image
               style={styles.image}
               source={{uri: item.src}}
@@ -149,6 +219,46 @@ export default function Tracking() {
             <Text style={styles.listCounter}> {item.counter} </Text>
           </TouchableOpacity>
         ) : null}
+
+        <View>
+          <View>
+            <Modal
+              animationType="slide"
+              visible={modalVisible}
+              transparent={true}
+              onRequestClose={() => {
+                Alert.alert('Modal has been closed.');
+                setModalVisible(!modalVisible);
+              }}>
+              <View style={styles.donateModalContainer}>
+              <FlatList
+
+            />
+                <Pressable
+                  onPress={() => {
+                    setModalVisible(!modalVisible);
+                  }}>
+                  <Image source={Exit} style={styles.donateModalExit} />
+                </Pressable>
+                <Image
+                  style={styles.modalClothesImage}
+                  source={{uri: selectedItem.src}}
+                  resizeMode="contain"
+                />
+                <View style={styles.modalContents}>
+                  <Text style={styles.modalCountText}> Number of Wears:</Text>
+                  <Text style={styles.modalCount}> {selectedItem.counter}</Text>
+                  <Text style={styles.modalCategory}>
+                    {' '}
+                    {selectedItem.category}
+                  </Text>
+                  <Text style={styles.modalName}> {selectedItem.Name}</Text>
+                  {/*  Need to make pressable right here for add to donation list */}
+                </View>
+              </View>
+            </Modal>
+          </View>
+        </View>
       </View>
     );
   };

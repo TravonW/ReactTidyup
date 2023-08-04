@@ -411,10 +411,33 @@ export default StyleSheet.create({
 
 
     ///DOnate Styles
+    leastUseDonateListContainer:{
+ 
+    },
     leastUseDonateList:{
         height: 600,
         position: "absolute",
         top: 50,
-
+        left: 18,
+        width:360,
+        flex: 1,
+        flexWrap: "wrap",
+        flexDirection: "row"
     },
+    donateImages:{
+        width: 95,
+        height: 90,
+    },
+    donateImagesConatiner:{
+        borderWidth:0.5,
+        padding: 8,
+        borderRadius:10,
+        justifyContent: "center",
+        borderWidth: 1,
+        borderColor: "#91C8FF"
+        
+    },
+    donateClothesView:{
+        flexWrap: 'wrap'
+    }
 })

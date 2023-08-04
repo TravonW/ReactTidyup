@@ -145,7 +145,7 @@ export default StyleSheet.create({
         shadowRadius: 3,
 
     },
-    donateModalExit:{
+    trackingModalExit:{
         position: "absolute",
      
         right: 1,
@@ -483,5 +483,68 @@ export default StyleSheet.create({
         borderWidth: 1,
         borderRadius: "15%",
         overflow: 1,
-    }
+    },
+    donateModalClothesImage:{
+        width: 300,
+        height: 150,    
+        position: "absolute",
+        alignSelf: "center",
+        borderRadius: 30,
+        bottom: 10,
+    
+        overflow: 'hidden',
+        alignSelf: "center",
+        backgroundColor: "#91C8FF",
+        marginBottom: 40,
+  
+        
+    },
+    donateModalExit:{
+        position: "absolute",
+        bottom:200,
+        right: 1,
+        height: 39,
+        width: 39,
+        backgroundColor:"#91C8FF",
+        borderRadius: 35,
+        alignSelf: "flex-end"
+        
+        
+        
+    },
+    donateModalCountText:{
+        position: "absolute",
+        
+        fontSize: 40,
+        top:150,
+    
+
+
+    },
+    donateModalCount:{
+        position: "absolute",
+    
+        right: 30,
+        fontSize: 40,
+        top: 150,
+        
+
+    },
+    donateModalCategory:{
+        position: "absolute",
+    
+        color: "#91C8FF",
+        fontSize: 40,
+        top: 75,
+
+
+    },
+    donateModalName:{
+     
+        fontSize: 50,
+        fontWeight: 'bold', // Use a numeric value or remove this line
+        alignSelf: "center",
+        top: 10,
+ 
+    },
 })

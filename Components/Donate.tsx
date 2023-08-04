@@ -92,14 +92,14 @@ import {
                       setModalVisible(!modalVisible)
                   }}>
                       <Image
-              style={styles.modalClothesImage}
+              style={styles.donateModalClothesImage}
               source={{uri: selectedItem.src}}
               resizeMode="contain"
             />
-                  <Text style={styles.modalCountText}> Number :</Text>
-                  <Text style={styles.modalCount}> {selectedItem.counter}</Text>
-                  <Text style={styles.modalCategory}> {selectedItem.category}</Text>
-                  <Text style={styles.modalName}> {selectedItem.Name}</Text>
+                  <Text style={styles.donateModalCountText}> Number :</Text>
+                  <Text style={styles.donateModalCount}> {selectedItem.counter}</Text>
+                  <Text style={styles.donateModalCategory}> {selectedItem.category}</Text>
+                  <Text style={styles.donateModalName}> {selectedItem.Name}</Text>
                   <Image source={Exit} style={styles.donateModalExit} />
                   </Pressable>
               </View>

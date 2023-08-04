@@ -175,6 +175,7 @@ import {
           {!isLoading ? (
             <ActivityIndicator />
           ) : (
+            /// Put all the list in one scrollable and have them different catergories but all 3 scroll together
             <FlatList
             // Add height to big scroll tag to make it long
               style={styles.leastUseDonateList}
@@ -182,7 +183,7 @@ import {
               renderItem={renderLeastUsedFlatList}
               keyExtractor={item => `key-${item.id}`}
               vertical={true}
-              showsVerticalScrollIndicator={true}
+              showsVerticalScrollIndicator={true }
             />
           )}
         

@@ -147,7 +147,7 @@ export default StyleSheet.create({
     },
     trackingModalExit:{
         position: "absolute",
-     
+        top: 1,
         right: 1,
         height: 39,
         width: 39,
@@ -217,12 +217,24 @@ export default StyleSheet.create({
 
     },
     modalDonateButton:{
-        color: "red",
+        backgroundColor:"#91C8FF",
+        alignSelf: "center",
+        borderStyle: "solid",
+        borderWidth: 1,
+        borderRadius: "3%",
+        width: "88%",
+        height:50,
         txtFontSize: 20,
-        backgroundColor:'red',
-        width:400,
-        height:30,
+        position: "absolute",
+        top: 140,
+        textAlign: "center"
         
+        
+    },
+    modalzDonateButtonText:{
+        color: "black",
+        textAlign: "center"
+      
     },
     modalButton:{
 

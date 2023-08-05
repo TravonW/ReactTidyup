@@ -9,6 +9,7 @@ import {
     TouchableOpacity,
     ActivityIndicator,
     Modal,
+    ScrollView
   } from 'react-native';
   import Ionicons from '@expo/vector-icons/Ionicons';
   import {SafeAreaView} from 'react-native-safe-area-context';
@@ -52,11 +53,11 @@ import {
         <View>
           <TouchableOpacity
             style={[
-              styles.item,
+              styles.donateImagesConatiner,
               {
                 marginTop: 11,
-                height: 220,
-                width: 200,
+                height: 125,
+                width: 110,
                 backgroundColor: 'white',
                 margin: 5,
               },
@@ -69,7 +70,7 @@ import {
             //curly brackets when calling object/ defining object
           >
             <Image
-              style={styles.imageLeastUse}
+              style={styles.donateImages}
               source={{uri: item.src}}
               resizeMode="contain"
             />
@@ -91,14 +92,14 @@ import {
                       setModalVisible(!modalVisible)
                   }}>
                       <Image
-              style={styles.modalClothesImage}
+              style={styles.donateModalClothesImage}
               source={{uri: selectedItem.src}}
               resizeMode="contain"
             />
-                  <Text style={styles.modalCountText}> Number :</Text>
-                  <Text style={styles.modalCount}> {selectedItem.counter}</Text>
-                  <Text style={styles.modalCategory}> {selectedItem.category}</Text>
-                  <Text style={styles.modalName}> {selectedItem.Name}</Text>
+                  <Text style={styles.donateModalCountText}> Number :</Text>
+                  <Text style={styles.donateModalCount}> {selectedItem.counter}</Text>
+                  <Text style={styles.donateModalCategory}> {selectedItem.category}</Text>
+                  <Text style={styles.donateModalName}> {selectedItem.Name}</Text>
                   <Image source={Exit} style={styles.donateModalExit} />
                   </Pressable>
               </View>
@@ -163,29 +164,34 @@ import {
     };
   
     return (
-      <View style={styles.container}>
-        <View style={styles.logoContainer}>
-          <Image source={Logo} style={styles.logo} />
-          <Image source={Search} style={styles.search} />
-          <Image source={Profile} style={styles.profile} />
+      <View style={styles.donateContainer}>
+        <View style={styles.donateLogoContainer}>
+          <Image source={Logo} style={styles.donateLogo} />
+          {/* <Image source={Search} style={styles.search} /> */}
+          <Image source={Profile} style={styles.donateProfile} />
         </View>
   
         <View >
-          <Text > Least Used</Text>
+          <Text style={styles.textAboveDonationListL}> Donation List </Text>
+         
           {!isLoading ? (
             <ActivityIndicator />
           ) : (
-            /// Put all the list in one scrollable and have them different catergories but all 3 scroll together
+              
+            // Put all the list in one scrollable and have them different catergories but all 3 scroll together 
             <FlatList
             // Add height to big scroll tag to make it long
               style={styles.leastUseDonateList}
+              columnWrapperStyle={styles.donateClothesView}
               data={clothesOrganize}
               renderItem={renderLeastUsedFlatList}
               keyExtractor={item => `key-${item.id}`}
               vertical={true}
-              showsVerticalScrollIndicator={true }
+              numColumns={3}
+              showsHorizontalScrollIndicator={true }
             />
           )}
+        
         
         </View>
         {/*  Button for donate and favorite */}

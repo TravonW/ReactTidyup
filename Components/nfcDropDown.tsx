@@ -1,5 +1,8 @@
+// @ts-nocheck
 import DropDownPicker from 'react-native-dropdown-picker';
 import { useState } from 'react';
+
+
 import  {writeNFCS} from './write';
 import {
   Pressable,
@@ -47,10 +50,14 @@ console.log(value)
          if(labelcool.value === "cool"){writeNFCS()}
       }}
       style={{
-        borderRadius: 10
+        borderRadius: 15, top: 20, height: 65, width: "88%", alignSelf: "center",  borderStyle: "solid",
+        borderWidth: 1,
       }}
       textStyle={{
-        color: "#91C8FF"
+        color: "#91C8FF",
+        textAlign: "center",
+        fontSize: 25,
+        fontFamily: "Georgia"
       }}
 
 

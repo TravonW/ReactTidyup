@@ -1,5 +1,6 @@
 import { StyleSheet } from "react-native";
 
+
 export default StyleSheet.create({
 
     // Tracking
@@ -144,7 +145,7 @@ export default StyleSheet.create({
         shadowRadius: 3,
 
     },
-    donateModalExit:{
+    trackingModalExit:{
         position: "absolute",
      
         right: 1,
@@ -152,7 +153,7 @@ export default StyleSheet.create({
         width: 39,
         backgroundColor:"#91C8FF",
         borderRadius: 35,
-        alignSelf: "flex-end"
+        alignSelf: "center"
         
         
         
@@ -342,15 +343,21 @@ export default StyleSheet.create({
 
 
     },
+ 
     ScanTagText:{
         color:"#91C8FF",
         textAlign: "center",
         fontSize: 40,
+        Top: 10,
 
     },
     scanNfcButtonText:{
         color: "#91C8FF",
-        fontSize: 30,
+        fontSize: 40,
+        alignSelf: "center",
+        top: 5,
+        fontFamily: "Georgia"
+
         
     },
     scanNfcButton:{
@@ -361,20 +368,31 @@ export default StyleSheet.create({
         borderRadius: "15%",
         borderColor:"#black" ,
         borderWidth: 1,
-        height: 40,
+        height: 65,
+        top: 1,
+        
         
         
 
     },
-    AddTagText:{
+    addTagText:{
         color:"#91C8FF",
-        textAlign: "center",
-        fontSize:40, 
+        fontSize:20, 
+        width: 300,
+        alignSelf:"center",
+        right: 50,
+        position:"relative",
+        top:15,
+        fontFamily:"Georgia"
+
+        
 
     },
     writeToNfcButtonText:{
         color: "#91C8FF",
         fontSize: 40,
+        alignSelf: "center",
+        fontFamily:"Georgia"
 
     },
     writeToNfcDoneButton:{
@@ -387,8 +405,9 @@ export default StyleSheet.create({
         borderWidth: 1,
 
         position: "absolute",
-        bottom: -90,
+        bottom: -170,
         color:"#91C8FF",
+
         
 
 
@@ -399,22 +418,168 @@ export default StyleSheet.create({
         borderRadius: "15%",
         borderWidth: 1,
 
-        height: 50,
+        height: 45,
+
+        position: "absolute",
+        top: 25,
+        alignSelf: "center",
+        width: "88%",
+        height: 65,
+        fontFamily: "Georgia"
 
     
     },
     writeNfcButtonName:{
         color:"#91C8FF",
+        fontSize: 30,
+        textAlign: "center",
+       
     },
 
 
 
 
     ///DOnate Styles
+    donateContainer: {
+        position: "relative",
+        height: 125,
+        backgroundColor: 'white',
+        shadowColor: 'black',
+        shadowOffset: { width: -2, height: 4 },
+        shadowOpacity: 0.5,
+        shadowRadius: 3,
+    },
+
+
+    donateLogoContainer: {
+        left: 20,
+        marginTop: 75,
+        flex: 1,
+        flexDirection: 'row'
+    },
+    donateLogo: {
+        position: "absolute",
+        left: 10,
+        height: 52,
+        width: 260,
+        bottom: -20,
+    },
+    donateProfile: {
+        position: "absolute",
+        right: 30,
+        bottom: -20,
+        width: 32,
+        height: 32,
+    },
+    
+
+
+    leastUseDonateListContainer:{
+ 
+    },
     leastUseDonateList:{
         height: 600,
         position: "absolute",
         top: 50,
+        left: 18,
+        width:360,
+        flex: 1,
+        flexWrap: "wrap",
+        flexDirection: "row"
+    },
+    donateImages:{
+        width: 95,
+        height: 90,
+    },
+    donateImagesConatiner:{
+        borderWidth:0.5,
+        padding: 8,
+        borderRadius:10,
+        justifyContent: "center",
+        borderWidth: 1,
+        borderColor: "#91C8FF"
+        
+    },
+    donateClothesView:{
+        flexWrap: 'wrap'
+    },
+    textAboveDonationListL:{
+        backgroundColor:"#91C8FF",
+        alignSelf: "center",
+        textAlign: "center",
+        fontFamily: "Georgia",
+        fontSize: 20,
+        top: 35,
+
+        width: "90%",
+
+        borderStyle: "solid",
+        borderWidth: 1,
+        borderRadius: "15%",
+        overflow: 1,
+    },
+    donateModalClothesImage:{
+        width: 300,
+        height: 150,    
+        position: "absolute",
+        alignSelf: "center",
+        borderRadius: 30,
+        bottom: 10,
+    
+        overflow: 'hidden',
+        alignSelf: "center",
+        backgroundColor: "#91C8FF",
+        marginBottom: 40,
+  
+        
+    },
+    donateModalExit:{
+        position: "absolute",
+        bottom:200,
+        right: 1,
+        height: 39,
+        width: 39,
+        backgroundColor:"#91C8FF",
+        borderRadius: 35,
+        alignSelf: "flex-end"
+        
+        
+        
+    },
+    donateModalCountText:{
+        position: "absolute",
+        
+        fontSize: 40,
+        top:150,
+    
+
 
     },
+    donateModalCount:{
+        position: "absolute",
+    
+        right: 30,
+        fontSize: 40,
+        top: 150,
+        
+
+    },
+    donateModalCategory:{
+        position: "absolute",
+    
+        color: "#91C8FF",
+        fontSize: 40,
+        top: 75,
+
+
+    },
+    donateModalName:{
+     
+        fontSize: 50,
+        fontWeight: 'bold', // Use a numeric value or remove this line
+        alignSelf: "center",
+        top: 10,
+ 
+    },
+ 
 })

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import { useState, useEffect } from 'react';
 import {
   View,
@@ -55,7 +56,7 @@ export default function NfcReader(): JSX.Element {
       await NfcManager.requestTechnology(NfcTech.Ndef);
 
       const byteData = Ndef.encodeMessage([
-        Ndef.uriRecord('https://www.instagram.com/patoe1991/?hl=en'),
+        Ndef.uriRecord('https://www.instagram.com/partyingwiththetates/?hl=en'),
       ]);
       if (byteData) {
         await NfcManager.ndefHandler.writeNdefMessage(byteData);
@@ -90,17 +91,22 @@ export default function NfcReader(): JSX.Element {
         <View style={styles.scanAndWriteContainer}>
           {/* Scan Tag Container */}
           <View>
-            <Text style={styles.ScanTagText}> Scan Tag</Text>
+            {/* <Text style={styles.ScanTagText}> Scan Tag</Text> */}
+            <View>
+              {/*  just make the border bigger and u done */}
             <TouchableOpacity onPress={readNdef} style={styles.scanNfcButton}>
-              <Text style={styles.scanNfcButtonText}>Scan </Text>
+              <Text style={styles.scanNfcButtonText}>Scan Now!</Text>
             </TouchableOpacity>
+            </View>
           </View>
           {/* Add Tag Container */}
+
           <View>
-            <Text style={styles.AddTagText}> Add Tag</Text>
-            <NfcDropDown />
             <View>
-              
+              <Text style={styles.addTagText}> Add Tag</Text>
+            </View>
+            <NfcDropDown/>
+            <View>
             </View>
             {/* Name Input */}
             <View>

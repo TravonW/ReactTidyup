@@ -12,7 +12,7 @@ export default function useClothesFlatList(){
             src: 'https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/output=quality:20/resize=height:1400,width:1050/no_metadata/compress/wsXPUox3SOyjmK565iO9',
             counter:7,
             category:"Pants",
-            Name: "KapitalXJapanese"
+            Name: "KapitalXJapan"
         },
         {
             src: 'https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/output=quality:20/resize=height:1400,width:1400/no_metadata/compress/cBoUoYJXTNCd23O0qsoC',
@@ -56,7 +56,7 @@ export default function useClothesFlatList(){
             src: 'https://process.fs.grailed.com/AJdAgnqCST4iPtnUxiGtTz/auto_image/cache=expiry:max/rotate=deg:exif/output=quality:20/resize=height:1400/no_metadata/compress/Vs2jXC14QkOO9Is6gCuW',
             counter:15,
             category:"Pants",
-            Name: "Kapital Kurashiki",
+            Name: "Kurashiki",
         },
         {
             src: 'https://img.ltwebstatic.com/images3_pi/2023/02/28/16775789889064f84899c6c6a5c3943965a29e7e4c_thumbnail_720x.webp',

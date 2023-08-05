@@ -14,7 +14,7 @@ import {
 } from 'react-native';
 import Ionicons from '@expo/vector-icons/Ionicons';
 import {SafeAreaView} from 'react-native-safe-area-context';
-import Search from '../assets/images/search.png';
+
 import Profile from '../assets/images/profile.png';
 import Logo from '../assets/images/logo.png';
 import Exit from '../assets/images/Exit.png';
@@ -96,7 +96,7 @@ export default function Tracking() {
                 onPress={() => {
                   setModalVisible(!modalVisible);
                 }}>
-                <Image source={Exit} style={styles.donateModalExit} />
+                <Image source={Exit} style={styles.trackingModalExit} />
                
               </Pressable>
               <Image
@@ -167,7 +167,7 @@ export default function Tracking() {
                   onPress={() => {
                     setModalVisible(!modalVisible);
                   }}>
-                  <Image source={Exit} style={styles.donateModalExit} />
+                  <Image source={Exit} style={styles.trackingModalExit} />
                 </Pressable>
                 <Image
                   style={styles.modalClothesImage}
@@ -177,6 +177,7 @@ export default function Tracking() {
                 <View style={styles.modalContents}>
                   <Text style={styles.modalCountText}> Number of Wears:</Text>
                   <Text style={styles.modalCount}> {selectedItem.counter}</Text>
+                  
                   <Text style={styles.modalCategory}>
                     {' '}
                     {selectedItem.category}
@@ -238,7 +239,7 @@ export default function Tracking() {
                   onPress={() => {
                     setModalVisible(!modalVisible);
                   }}>
-                  <Image source={Exit} style={styles.donateModalExit} />
+                  <Image source={Exit} style={styles.trackingModalExit} />
                 </Pressable>
                 <Image
                   style={styles.modalClothesImage}
@@ -267,7 +268,6 @@ export default function Tracking() {
     <View style={styles.container}>
       <View style={styles.logoContainer}>
         <Image source={Logo} style={styles.logo} />
-        <Image source={Search} style={styles.search} />
         <Image source={Profile} style={styles.profile} />
       </View>
 

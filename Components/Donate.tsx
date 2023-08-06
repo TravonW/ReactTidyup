@@ -156,7 +156,8 @@ import {
                 source={{uri: item.src}}
                 resizeMode="contain"
               />
-              <Text style={styles.listCounter}> {item.counter} </Text>
+              <Text style={styles.listCounter}> {item.counter}  </Text>
+              <Text style={styles.donateListName}> {item.Name}  </Text>
             </TouchableOpacity>
           ) : null}
         </View>

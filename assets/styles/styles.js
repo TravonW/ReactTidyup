@@ -338,7 +338,7 @@ export default StyleSheet.create({
         marginTop: 5
     },
     scanBackground:{
-        backgroundColor: "grey",
+        backgroundColor: "#91C8FF",
         maxHeight: "100%",
         maxWidth: "100%",
         height: "100%",
@@ -392,7 +392,7 @@ export default StyleSheet.create({
         fontSize:20, 
         width: 300,
         alignSelf:"center",
-        right: 50,
+        right: 40,
         position:"relative",
         top:15,
         fontFamily:"Georgia"
@@ -404,20 +404,22 @@ export default StyleSheet.create({
         color: "#91C8FF",
         fontSize: 40,
         alignSelf: "center",
-        fontFamily:"Georgia"
+        fontFamily:"Georgia",
+        position: "absolute",
+        top: 10,
 
     },
     writeToNfcDoneButton:{
         width: "88%",
         alignSelf: "center",
-        
+        height: 70,
         borderStyle: "solid",
         borderRadius: "15%",
         borderColor: "black",
         borderWidth: 1,
 
         position: "absolute",
-        bottom: -170,
+        bottom: -240,
         color:"#91C8FF",
 
         
@@ -430,13 +432,11 @@ export default StyleSheet.create({
         borderRadius: "15%",
         borderWidth: 1,
 
-        height: 45,
-
         position: "absolute",
-        top: 25,
+        top: 80,
         alignSelf: "center",
         width: "88%",
-        height: 65,
+        height: 60,
         fontFamily: "Georgia"
 
     
@@ -502,6 +502,7 @@ export default StyleSheet.create({
     donateImages:{
         width: 95,
         height: 90,
+        border: 1,
     },
     donateImagesConatiner:{
         borderWidth:0.5,
@@ -509,7 +510,8 @@ export default StyleSheet.create({
         borderRadius:10,
         justifyContent: "center",
         borderWidth: 1,
-        borderColor: "#91C8FF"
+        borderColor: "#91C8FF",
+        borderBottomWidth: 1
         
     },
     donateClothesView:{

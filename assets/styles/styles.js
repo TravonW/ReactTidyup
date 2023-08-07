@@ -345,7 +345,7 @@ export default StyleSheet.create({
         width: "100%",
         position: "absolute",
         bottom: -10,
-        borderRadius: "25%"
+        borderRadius: "17%"
 
 
     },
@@ -382,23 +382,25 @@ export default StyleSheet.create({
 
     },
     addTagText:{
-        color:"#91C8FF",
-        fontSize:20, 
+        color:"black",
+        fontSize:30, 
         width: 300,
         alignSelf:"center",
         right: 40,
         position:"relative",
         top:15,
-        fontFamily:"Georgia"
+        fontFamily:"Inter",
+        fontWeight: 50,
+        
 
         
 
     },
     writeToNfcButtonText:{
-        color: "#91C8FF",
+        color: "white",
         fontSize: 40,
         alignSelf: "center",
-        fontFamily:"Georgia",
+        fontFamily:"Inter",
         position: "absolute",
         top: 10,
 
@@ -406,15 +408,16 @@ export default StyleSheet.create({
     writeToNfcDoneButton:{
         width: "88%",
         alignSelf: "center",
-        height: 70,
+        height: 65,
         borderStyle: "solid",
         borderRadius: "15%",
-        borderColor: "black",
+        borderColor: "#91C8FF",
         borderWidth: 1,
+        backgroundColor: "#91C8FF",
 
         position: "absolute",
-        bottom: -240,
-        color:"#91C8FF",
+        bottom: -230,
+        
 
         
 
@@ -427,18 +430,18 @@ export default StyleSheet.create({
         borderWidth: 1,
 
         position: "absolute",
-        top: 80,
+        top: 65,
         alignSelf: "center",
         width: "88%",
         height: 60,
-        fontFamily: "Georgia"
+        fontFamily: "Inter"
 
     
     },
     writeNfcButtonName:{
         color:"#91C8FF",
         fontSize: 30,
-        textAlign: "center",
+        textAlign: "left",
        
     },
 

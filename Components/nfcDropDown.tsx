@@ -36,28 +36,31 @@ console.log(value)
 
 
   return (
+    
     <DropDownPicker
       open={open}
       value={value}
       items={items}
+      
       //default is setopen but by changing it to writeNFCS u will make it do the write function
       setOpen={setOpen}
       setValue={setValue}
       setItems={setItems}
+      placeholder='Category'
       // onOpen={writeNFCS}
       // use this to put selected item in variable for pants or shirt
       onSelectItem= {(labelcool) => {
          if(labelcool.value === "cool"){writeNFCS()}
       }}
       style={{
-        borderRadius: 15, top: 50, height: 60, width: "88%", alignSelf: "center",  borderStyle: "solid",
+        borderRadius: 15, top: 35, height: 60, width: "88%", alignSelf: "center",  borderStyle: "solid",
         borderWidth: 1,
       }}
       textStyle={{
         color: "#91C8FF",
-        textAlign: "center",
+        textAlign: "left",
         fontSize: 25,
-        fontFamily: "Georgia"
+        fontFamily: "Inter"
       }}
 
 

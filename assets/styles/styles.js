@@ -173,7 +173,7 @@ export default StyleSheet.create({
     modalClothesImage:{
         width: '100%',
         height: 352,    
-        top: -55,
+        top: -28,
         borderTopRightRadius: 25,
         borderTopLeftRadius: 25,
     },
@@ -200,8 +200,9 @@ export default StyleSheet.create({
         fontSize: 25,
         fontWeight: 'bold', // Use a numeric value or remove this line
         alignSelf: 'center',
-        top: -35,
-        textAlign: 'center'
+        top: -19,
+        textAlign: 'center',
+        
     },
     modalContents:{
         justifyContent: "center",

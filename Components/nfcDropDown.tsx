@@ -50,7 +50,7 @@ console.log(value)
          if(labelcool.value === "cool"){writeNFCS()}
       }}
       style={{
-        borderRadius: 15, top: 20, height: 65, width: "88%", alignSelf: "center",  borderStyle: "solid",
+        borderRadius: 15, top: 50, height: 60, width: "88%", alignSelf: "center",  borderStyle: "solid",
         borderWidth: 1,
       }}
       textStyle={{

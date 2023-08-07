@@ -93,17 +93,17 @@ export default function NfcReader(): JSX.Element {
           <View>
             {/* <Text style={styles.ScanTagText}> Scan Tag</Text> */}
             <View>
-              {/*  just make the border bigger and u done */}
-            <TouchableOpacity onPress={readNdef} style={styles.scanNfcButton}>
+              {/*  code to have a scanner read the tag within the app */}
+            {/* <TouchableOpacity onPress={readNdef} style={styles.scanNfcButton}>
               <Text style={styles.scanNfcButtonText}>Scan Now!</Text>
-            </TouchableOpacity>
+            </TouchableOpacity> */}
             </View>
           </View>
           {/* Add Tag Container */}
 
           <View>
             <View>
-              <Text style={styles.addTagText}> Add Tag</Text>
+              <Text style={styles.addTagText}> Add Hanger</Text>
             </View>
             <NfcDropDown/>
             <View>

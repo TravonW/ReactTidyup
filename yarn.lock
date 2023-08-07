@@ -5710,9 +5710,9 @@ react-native-vector-icons@^10.0.0:
     prop-types "^15.7.2"
     yargs "^16.1.1"
 
-react-native@0.72.3:
+react-native@^0.72.3:
   version "0.72.3"
-  resolved "https://registry.npmjs.org/react-native/-/react-native-0.72.3.tgz"
+  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.72.3.tgz#f8d85ec81c9f3592d091ec8e9ac1694956a72765"
   integrity sha512-QqISi+JVmCssNP2FlQ4MWhlc4O/I00MRE1/GClvyZ8h/6kdsyk/sOirkYdZqX3+DrJfI3q+OnyMnsyaXIQ/5tQ==
   dependencies:
     "@jest/create-cache-key-function" "^29.2.1"

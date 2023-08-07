@@ -4,6 +4,21 @@ import { StyleSheet } from "react-native";
 export default StyleSheet.create({
 
     // Tracking
+    header: {
+        fontSize: 25,
+        fontWeight: 'bold'
+    },
+    clothesName:{
+        alignSelf: 'center',
+        fontSize: 12,
+        fontWeight: 'bold',
+
+    },
+    clothesID: {
+        alignSelf: 'center',
+        fontSize: 12,
+        color: '#5E5E5E'        
+    },
     container: {
         position: "relative",
         height: 125,
@@ -17,7 +32,6 @@ export default StyleSheet.create({
         position: "absolute",
         right: 70,
         top: 80,
-     
         width: 32,
         height: 32,
     },
@@ -36,21 +50,21 @@ export default StyleSheet.create({
     },
     leastused: {
         position: "absolute",
-        top: -30,
+        top: -10,
         left: 10,
         fontWeight: "bold",
         fontSize: 20,
     },
     shirts: {
         position: "absolute",
-        top: 400,
+        top: 360,
         left: 10,
         fontWeight: "bold",
         fontSize: 20,
     },
     pants: {
         position: "absolute",
-        marginTop: 480,
+        marginTop: 450,
         marginLeft: 15,
         fontWeight: "bold",
         fontSize: 20,
@@ -81,8 +95,6 @@ export default StyleSheet.create({
         justifyContent: "center",
         borderWidth: 1,
         borderColor: "#91C8FF"
-
-       
         
     },
 
@@ -93,28 +105,28 @@ export default StyleSheet.create({
 
     },
     imageLeastUse:{
-        width: 140,
-        height: 200,
-        alignSelf: "center"
-  
-        
+        width: 137,
+        height: 126,
+        alignSelf: "center",
+        backgroundColor: 'white',
+        borderTopLeftRadius: 15,
+        borderTopRightRadius: 15,
+
     },
     leastUseList:{
         position: "absolute",
-        top: 170,
+        top: 150,
         left: 3,
-        
-
+        flex: 1
     },
     shirtsList:{
         position: "absolute",
-        top: 425,
+        top: 390,
         left: 3,
-
     },
     pantsList:{
         position: "absolute",
-        top: 500,
+        top: 480,
         left: 3,
 
 
@@ -123,19 +135,28 @@ export default StyleSheet.create({
         position: "absolute",
         top: 10,
         left: 14,
-        borderStyle: "solid",
-        borderColor: "#AFB1B6",
-        borderWidth: 1,
         borderRadius: 3,
         backgroundColor: "#91C8FF",
         // overflow hides all behind the border
-         overflow: 'hidden'
-
-
+        overflow: 'hidden'
+    },
+    selectedID: {
+        fontSize: 20,
+        position: 'absolute',
+        top: 25,
+        left: 20,
+        color: 'white',
+        backgroundColor: '#8BD5FF',
+        width: 85,
+        borderRadius: 20,
+        textAlign: 'center',
+        paddingTop: 5,
+        paddingBottom: 5,
+        overflow: 'hidden'
     },
     donateModalContainer:{
         justifyContent: "center",
-        height: "50%",
+        height: "60%",
         marginTop: 'auto',
         backgroundColor: "white", 
         borderRadius: 25,
@@ -146,43 +167,21 @@ export default StyleSheet.create({
 
     },
     trackingModalExit:{
-        position: "absolute",
-     
-        right: 1,
         height: 39,
         width: 39,
-        backgroundColor:"#91C8FF",
-        borderRadius: 35,
-        alignSelf: "center"
-        
-        
-        
     },
     modalClothesImage:{
-        width: 300,
-        height: 150,    
-        position: "absolute",
-        borderRadius: 30,
-        top: 35,
-    
-        overflow: 'hidden',
-        alignSelf: "center",
-        backgroundColor: "#91C8FF",
-        marginBottom: 40,
-  
-        
+        width: '100%',
+        height: 352,    
+        top: -55,
+        borderTopRightRadius: 25,
+        borderTopLeftRadius: 25,
     },
-    modalCountText:{
-        position: "absolute",
-        
+    modalCountText:{        
         fontSize: 30,
         bottom: 95,
-    
-
-
     },
     modalCount:{
-        position: "absolute",
     
         right: 30,
         fontSize: 30,
@@ -190,9 +189,7 @@ export default StyleSheet.create({
         
 
     },
-    modalCategory:{
-        position: "absolute",
-    
+    modalCategory:{    
         color: "#91C8FF",
         fontSize: 30,
         bottom: 135,
@@ -200,12 +197,11 @@ export default StyleSheet.create({
 
     },
     modalName:{
-     
-        fontSize: 50,
+        fontSize: 25,
         fontWeight: 'bold', // Use a numeric value or remove this line
-        alignSelf: "center",
-        bottom: 95,
- 
+        alignSelf: 'center',
+        top: -35,
+        textAlign: 'center'
     },
     modalContents:{
         justifyContent: "center",
@@ -213,8 +209,6 @@ export default StyleSheet.create({
         marginTop: 'auto',
         backgroundColor:"white",
         borderRadius: 25,
-     
-
     },
     modalDonateButton:{
         color: "red",
@@ -480,12 +474,13 @@ export default StyleSheet.create({
     leastUseDonateList:{
         height: 600,
         position: "absolute",
-        top: 50,
+        top: 27,
         left: 18,
         width:360,
         flex: 1,
         flexWrap: "wrap",
-        flexDirection: "row"
+        flexDirection: "row",
+        alignSelf: 'center'
     },
     donateImages:{
         width: 95,
@@ -501,22 +496,7 @@ export default StyleSheet.create({
         
     },
     donateClothesView:{
-        flexWrap: 'wrap'
-    },
-    textAboveDonationListL:{
-        backgroundColor:"#91C8FF",
-        alignSelf: "center",
-        textAlign: "center",
-        fontFamily: "Georgia",
-        fontSize: 20,
-        top: 35,
-
-        width: "90%",
-
-        borderStyle: "solid",
-        borderWidth: 1,
-        borderRadius: "15%",
-        overflow: 1,
+        flexWrap: 'wrap',
     },
     donateModalClothesImage:{
         width: 300,
@@ -579,7 +559,10 @@ export default StyleSheet.create({
         fontWeight: 'bold', // Use a numeric value or remove this line
         alignSelf: "center",
         top: 10,
- 
+    },
+    donateHeader: {
+        fontSize: 25,
+        fontWeight: 'bold'
     },
  
 })

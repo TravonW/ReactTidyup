@@ -615,11 +615,8 @@
 				DEVELOPMENT_TEAM = J67B5M4HQ4;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = SampleNativeApp/Info.plist;
-<<<<<<< HEAD
 				INFOPLIST_KEY_CFBundleDisplayName = TidyYup;
-=======
 				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
->>>>>>> upstream/main
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

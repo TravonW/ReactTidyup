@@ -6,11 +6,16 @@ import {
   SafeAreaView,
   TouchableOpacity,
   TextInput,
+  Image,
 } from 'react-native';
 import NfcManager, { Ndef, NfcEvents, NfcTech } from 'react-native-nfc-manager';
 import styles from '../assets/styles/styles';
 import NfcDropDown from './nfcDropDown';
-export default function NfcReader(): JSX.Element {
+import Add from '../assets/images/addimg.png'
+import Exit from '../assets/images/Exit.png'
+
+
+export default function NfcReader({navigation}): JSX.Element {
   const [nfc, setNfc] = useState<Boolean>(false);
 
 
@@ -82,50 +87,53 @@ export default function NfcReader(): JSX.Element {
   }
 
   return (
-    <SafeAreaView>
+    <View>
       {/* Page Container */}
       <View style={styles.scanBackground}>
-        <Text>Scan the NFC Sticker Please</Text>
-        {/* put image above scan code  */}
-        {/* Scan And Write container */}
-        <View style={styles.scanAndWriteContainer}>
-          {/* Scan Tag Container */}
+        <TouchableOpacity>
+          <Image source={Add} style={styles.addImage} />
+        </TouchableOpacity>
+      </View>
+      {/* put image above scan code  */}
+      {/* Scan And Write container */}
+      <View style={styles.scanAndWriteContainer}>
+        {/* Scan Tag Container */}
+        <View>
           <View>
-            {/* <Text style={styles.ScanTagText}> Scan Tag</Text> */}
-            <View>
-              {/*  code to have a scanner read the tag within the app */}
-            {/* <TouchableOpacity onPress={readNdef} style={styles.scanNfcButton}>
-              <Text style={styles.scanNfcButtonText}>Scan Now!</Text>
-            </TouchableOpacity> */}
-            </View>
-          </View>
-          {/* Add Tag Container */}
-
-          <View>
-            <View>
-              <Text style={styles.addTagText}> Add Hanger</Text>
-            </View>
-            <NfcDropDown/>
-            <View>
-            </View>
-            {/* Name Input */}
-            <View>
-              <TextInput style={styles.writeNfcButtonInput}> 
-              <Text style={styles.writeNfcButtonName}> Name </Text>
-              </TextInput>
-            </View>
-            {/* Done Button Container */}
-            <View>
-              <TouchableOpacity
-                onPress={writeNFC}
-                style={styles.writeToNfcDoneButton}>
-                <Text style={styles.writeToNfcButtonText}>Done Button</Text>
-              </TouchableOpacity>
-            </View>
-
           </View>
         </View>
+        {/* Add Tag Container */}
+
+        <View>
+          <View style={{flexDirection: 'row'}}>
+            <Text style={styles.addTagText}> Add Hanger</Text>
+            <TouchableOpacity onPress={() => {
+              navigation.navigate('Home')
+              console.log('tapped')
+            }}
+            style={{top: 37, left: 240, backgroundColor: 'red'}}
+            >
+            <Image source={Exit} style={styles.exitNFC} />
+            </TouchableOpacity>
+          </View>
+          <NfcDropDown />
+          <View>
+          </View>
+          {/* Name Input */}
+          <View>
+            <TextInput placeholder='Name' placeholderTextColor='#61646B' style={styles.writeNfcButtonInput} value=''/>
+          </View>
+          {/* Done Button Container */}
+          <View>
+            <TouchableOpacity
+              onPress={writeNFC}
+              style={styles.writeToNfcDoneButton}>
+              <Text style={styles.writeToNfcButtonText}>Done Button</Text>
+            </TouchableOpacity>
+          </View>
+
+        </View>
       </View>
-    </SafeAreaView>
+    </View>
   );
 }

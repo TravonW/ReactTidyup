@@ -333,22 +333,22 @@ export default StyleSheet.create({
         marginTop: 5
     },
     scanBackground:{
-        backgroundColor: "#91C8FF",
-        maxHeight: "100%",
-        maxWidth: "100%",
-        height: "100%",
+        backgroundColor: "#D9D9D9",
         width: "100%",
-
+        height: 409,
+        justifyContent: 'center'
+    },
+    addImage: {
+        width: 193,
+        height: 56,
+        alignSelf: 'center'
     },
     scanAndWriteContainer:{
-        backgroundColor: "white",
-        height: "50%",
+        height: 443,
         width: "100%",
-        position: "absolute",
-        bottom: -10,
-        borderRadius: "17%"
-
-
+        borderTopLeftRadius: 10,
+        borderTopRightRadius: 10,
+        overflow: 'hidden'
     },
  
     ScanTagText:{
@@ -383,19 +383,10 @@ export default StyleSheet.create({
 
     },
     addTagText:{
-        color:"black",
-        fontSize:30, 
-        width: 300,
-        alignSelf:"center",
-        right: 40,
-        position:"relative",
-        top:15,
-        fontFamily:"Inter",
-        fontWeight: 50,
-        
-
-        
-
+        fontSize: 20, 
+        left: 23,
+        top: 37,
+        fontWeight: 'bold'
     },
     writeToNfcButtonText:{
         color: "white",
@@ -415,35 +406,30 @@ export default StyleSheet.create({
         borderColor: "#91C8FF",
         borderWidth: 1,
         backgroundColor: "#91C8FF",
-
         position: "absolute",
         bottom: -230,
-        
-
-        
-
-
     },
     writeNfcButtonInput:{
         color:"black",
         borderStyle: "solid",
         borderRadius: "15%",
         borderWidth: 1,
-
         position: "absolute",
         top: 65,
         alignSelf: "center",
         width: "88%",
         height: 60,
         fontFamily: "Inter"
-
-    
     },
     writeNfcButtonName:{
         color:"#91C8FF",
         fontSize: 30,
         textAlign: "left",
        
+    },
+    exitNFC: {
+        width: 36,
+        height: 36,
     },
 
 

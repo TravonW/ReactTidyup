@@ -1,6 +1,6 @@
 import Tracking from '../Components/Tracking';
 import Donate from '../Components/Donate';
-import NfcReader from '../Components/NfcReader';
+import AddClothing from '../Components/AddClothing';
 
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 
@@ -23,15 +23,22 @@ export default function TabNaviagtion(): JSX.Element {
         }}
       />
       <Tabs.Screen
-        name="NFC"
-        component={NfcReader}
+        name="AddClothing"
+        component={AddClothing}
         options={{
           // Make a onpress to make it call the function like line 76 in NfcReader component
+          headerShown: false,
           tabBarLabel: 'NFC',
           tabBarIcon: ({color}) => (
             <MaterialCommunityIcons name="nfc" size={30} color={color} />
           ),
         }}
+        listeners={({navigation}) => ({
+          tabPress: event =>{
+            event.preventDefault()
+            navigation.navigate('NFC')
+          }
+        })}
       />
       <Tabs.Screen
         name="Donate"

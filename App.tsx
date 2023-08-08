@@ -6,53 +6,23 @@
  */
 
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
 
 import {NavigationContainer} from '@react-navigation/native';
 import TabNaviagtion from './AppNavigation/TabNavigation';
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import NfcReader from './Components/NfcReader';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
+const RootStack = createNativeStackNavigator()
 
 function App(): JSX.Element {
   return (
     <NavigationContainer>
-      <TabNaviagtion />
+      <RootStack.Navigator screenOptions={{headerShown: false}}>
+        <RootStack.Screen name='main' component={TabNaviagtion} />      
+        <RootStack.Screen name="NFC" component={NfcReader} options={{ animation: 'slide_from_bottom' }} />
+      </RootStack.Navigator>
     </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
 
 export default App;

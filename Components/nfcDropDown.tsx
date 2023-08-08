@@ -4,21 +4,6 @@ import { useState } from 'react';
 
 
 import  {writeNFCS} from './write';
-import {
-  Pressable,
-  StyleSheet,
-  Text,
-  View,
-  Image,
-  FlatList,
-  TouchableOpacity,
-  ActivityIndicator,
-  Modal,
-  LogBox,
-  Button,
-
-} from 'react-native';
-import { TextInput } from 'react-native-gesture-handler';
 
 
 
@@ -28,11 +13,7 @@ function NfcDropDown() {
   const [items, setItems] = useState([
     {label: 'Tops', value: 'Shirt'},
     {label: 'Bottoms', value: 'Pants'},
-    {labelcool: "cool", value: "cool"}
   ]);
-
-
-console.log(value)
 
 
   return (
@@ -47,20 +28,19 @@ console.log(value)
       setValue={setValue}
       setItems={setItems}
       placeholder='Category'
-      // onOpen={writeNFCS}
       // use this to put selected item in variable for pants or shirt
       onSelectItem= {(labelcool) => {
          if(labelcool.value === "cool"){writeNFCS()}
       }}
       style={{
-        borderRadius: 15, top: 35, height: 60, width: "88%", alignSelf: "center",  borderStyle: "solid",
+        borderRadius: 15, top: 35, height: 58, width: 343, alignSelf: "center",  borderStyle: "solid",
         borderWidth: 1,
       }}
       textStyle={{
-        color: "#91C8FF",
         textAlign: "left",
-        fontSize: 25,
-        fontFamily: "Inter"
+        fontSize: 14,
+        fontWeight: '400',
+        color: '#61646B'
       }}
 
 

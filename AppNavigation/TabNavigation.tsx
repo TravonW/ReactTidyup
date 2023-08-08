@@ -1,3 +1,4 @@
+// @ts-nocheck
 import Tracking from '../Components/Tracking';
 import Donate from '../Components/Donate';
 import AddClothing from '../Components/AddClothing';
@@ -7,6 +8,14 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
 import MaterialCommunityIcons from 'react-native-vector-icons/MaterialCommunityIcons';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
+import DonateLogo from "../assets/images/donateLogo.png";
+import {
+  Text,
+  View,
+  TouchableOpacity,
+  Image,
+
+} from 'react-native';
 
 const Tabs = createBottomTabNavigator();
 
@@ -30,7 +39,7 @@ export default function TabNaviagtion(): JSX.Element {
           headerShown: false,
           tabBarLabel: 'NFC',
           tabBarIcon: ({color}) => (
-            <MaterialCommunityIcons name="nfc" size={30} color={color} />
+            <MaterialCommunityIcons name="plus-circle" size={30} color={color} />
           ),
         }}
         listeners={({navigation}) => ({
@@ -46,7 +55,8 @@ export default function TabNaviagtion(): JSX.Element {
         options={{
           tabBarLabel: 'Donate',
           tabBarIcon: ({color}) => (
-            <FontAwesome5 name={'hand-holding-heart'} size={30} color={color} />
+            <Image source={DonateLogo} style={{width: 30, height:30, color: "black", 
+            }} />
           ),
           headerShown: false,
         }}

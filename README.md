@@ -1,3 +1,17 @@
+# TidyYup - Clothing Usage Tracker /  Garment Recylying 
+TidyYup is an garment tracking application with the objective of recyclying unused clothing. It accomplishes this by storing and updating information onto NFC stickers that contain useage data on a specific piece of clothing. Then proceeds to catorgize clothes into most used and least used list and reccomending near donation centers to send unused clothes to.
+
+# Features
+## Garment Tracking System:
+A list of shirts and pants that keeps a counter on each article of clothing of how many times you wear it by tracking the scans of the hanger. It puts the least worn clothes at the top of the “least used” list allowing the user to find clothes they haven’t used and donate those clothes.
+##The Donation Feature:
+A map and list that shows nearby donation centers and recycling centers. It shows the name of the location and how far away it is in miles.
+
+## The Hanger/NFC:
+A hanger which houses an NFC (Near Field Communicator), which you can scan with your phone by going to the scan feature in the app. It will be a tap scan, and once scanned you will put the clothing information and it will be added to your Garment Tracking System. From now on, scanning the hanger will add onto a counter on the clothes connected to that hanger. The hanger will also have a unique id imprinted on it in case the user forgets which clothing corresponds with which hanger.
+
+
+
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
 # Getting Started
